@@ -1,5 +1,131 @@
 @import "_reset";
 
+body {
+    overflow: hidden; /* Hide scrollbars */  
+    
+    
+  }
 h1 {
     font-size: 50px;
+}  
+@keyframes fall {
+    0% {
+        transform: translate(0px, -200px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
 }
+
+
+@mixin full {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    padding: 30px;
+    
+    
+    
+
+}
+#slider {
+    
+    &-1 {
+        background-color:darkgreen;
+        @include full;
+        position: relative;
+        
+        h1 {
+            animation: fall 2s  linear;
+
+        }
+        p {
+            animation: goin 2s linear;
+
+        }
+        
+        
+    }
+    &-2 {
+        background-color:purple;
+        @include full;
+    }
+    &-3 {
+        background-color:lightblue;
+        @include full;
+    }
+    &-4 {
+        background-color:grey;
+        @include full;
+    }
+}
+@keyframes fall {
+    0% {
+        transform: translate(0px, -200px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes goin {
+    0% {
+        transform: translate(-2200px, 0px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+.btn {
+   background-color: #fff;
+   color: rgb(83, 82, 82);
+   padding: 10px 20px;
+   margin: 5px;
+   text-decoration: none;
+   
+   &:hover {
+       background-color: rgb(83, 82, 82);
+       color: #fff;
+       transition: all 1s;
+
+   }
+   &-dark {
+        background-color: rgb(83, 82, 82);
+        color: #fff;
+        &:hover {
+            color: rgb(83, 82, 82);
+            background-color: #fff;
+            transition: all 1s;
+
+
+             
+        }
+        
+   }
+
+
+}
+/* .scroll-container {
+    scroll-behavior: smooth; /* I can not understAND WHY ITS NOT WORKING */
+/*}  */
+
+
+/* Slide 1 Variant */
+html {
+    scroll-behavior: smooth;
+  }
+
+/* @keyframes slide {
+    0% {
+        transform: translatey(-100vh);
+    }
+    100% {
+        transform: translatey(0vh);
+    }
+}
+ */
+

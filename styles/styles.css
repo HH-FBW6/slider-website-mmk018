@@ -1,5 +1,111 @@
 body {
   margin: 0; }
 
+body {
+  overflow: hidden;
+  /* Hide scrollbars */ }
+
 h1 {
   font-size: 50px; }
+
+@keyframes fall {
+  0% {
+    transform: translate(0px, -200px); }
+  100% {
+    transform: translate(0px, 0px); } }
+
+#slider-1 {
+  background-color: darkgreen;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  padding: 30px;
+  position: relative; }
+  #slider-1 h1 {
+    animation: fall 2s  linear; }
+  #slider-1 p {
+    animation: goin 2s linear; }
+
+#slider-2 {
+  background-color: purple;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  padding: 30px; }
+
+#slider-3 {
+  background-color: lightblue;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  padding: 30px; }
+
+#slider-4 {
+  background-color: grey;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  padding: 30px; }
+
+@keyframes fall {
+  0% {
+    transform: translate(0px, -200px); }
+  100% {
+    transform: translate(0px, 0px); } }
+
+@keyframes goin {
+  0% {
+    transform: translate(-2200px, 0px); }
+  100% {
+    transform: translate(0px, 0px); } }
+
+.btn {
+  background-color: #fff;
+  color: #535252;
+  padding: 10px 20px;
+  margin: 5px;
+  text-decoration: none; }
+  .btn:hover {
+    background-color: #535252;
+    color: #fff;
+    transition: all 1s; }
+  .btn-dark {
+    background-color: #535252;
+    color: #fff; }
+    .btn-dark:hover {
+      color: #535252;
+      background-color: #fff;
+      transition: all 1s; }
+
+/* .scroll-container {
+    scroll-behavior: smooth; /* I can not understAND WHY ITS NOT WORKING */
+/*}  */
+/* Slide 1 Variant */
+html {
+  scroll-behavior: smooth; }
+
+/* @keyframes slide {
+    0% {
+        transform: translatey(-100vh);
+    }
+    100% {
+        transform: translatey(0vh);
+    }
+}
+ */
